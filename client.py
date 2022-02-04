@@ -8,7 +8,7 @@ except socket.error as msg:
     sys.exit()
 print("Socket created")
 
-host, port = 'localhost', 1234
+host, port = sys.argv[1], int(sys.argv[2])
 
 s.connect((host, port))
 print("Successfully connected")
