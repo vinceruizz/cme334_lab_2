@@ -30,7 +30,7 @@ while (True):
     request_path = request_head.split(' ')[1]
 
     if os.path.isfile(request_path):
-        file = open(request_path, 'r', encoding='utf-8', errors='ignore')
+        file = open(request_path, 'r')
         response = 'HTTP/1.1 200 OK\n\n' + file.read()
         clientSocket.sendall(response.encode())
 
