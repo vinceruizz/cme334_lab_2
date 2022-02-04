@@ -28,7 +28,6 @@ while (True):
     request_head = request[0]
 
     request_path = request_head.split(' ')[1]
-    print(request_head)
 
     if os.path.isfile(request_path):
         file = open(request_path, 'r', encoding='utf-8', errors='ignore')
