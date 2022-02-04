@@ -27,10 +27,7 @@ while (True):
     request = data.replace('\r', '').split('\n')
     request_head = request[0]
 
-    if request_head.split(' ')[1][0] == '/':
-        request_path = request_head.split(' ')[1][1:]
-    else:
-        request_path = request_head.split(' ')[1]
+    request_path = request_head.split(' ')[1]
 
     if os.path.isfile(request_path):
         file = open(request_path, 'r', encoding='utf-8', errors='ignore')
